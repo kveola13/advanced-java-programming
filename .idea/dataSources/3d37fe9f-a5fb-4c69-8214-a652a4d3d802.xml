@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="world@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="world">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="calendar"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mydb"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sakila"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="testbase"/>
+    <schema id="11" parent="1" name="westerdals"/>
+    <table id="12" parent="2" name="accounts"/>
+    <table id="13" parent="2" name="city"/>
+    <table id="14" parent="2" name="country"/>
+    <table id="15" parent="2" name="countrylanguage"/>
+    <table id="16" parent="2" name="land"/>
+    <routine id="17" parent="2" name="ny_oppfoering">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="18" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <key id="19" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="13" name="Name">
+      <Position>2</Position>
+      <DataType>char(35)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="22" parent="13" name="CountryCode">
+      <Position>3</Position>
+      <DataType>char(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="13" name="District">
+      <Position>4</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="24" parent="13" name="Population">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="25" parent="13" name="CountryCode">
+      <ColNames>CountryCode</ColNames>
+    </index>
+    <key id="26" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="13" name="city_ibfk_1">
+      <ColNames>CountryCode</ColNames>
+      <RefSchemaName>world</RefSchemaName>
+      <RefTableName>country</RefTableName>
+      <RefColNames>Code</RefColNames>
+    </foreign-key>
+    <column id="28" parent="14" name="Code">
+      <Position>1</Position>
+      <DataType>char(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="14" name="Name">
+      <Position>2</Position>
+      <DataType>char(52)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="30" parent="14" name="Continent">
+      <Position>3</Position>
+      <DataType>enum(&apos;Asia&apos;, &apos;Europe&apos;, &apos;North America&apos;, &apos;Africa&apos;, &apos;Oceania&apos;, &apos;Antarctica&apos;, &apos;South America&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Asia&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="14" name="Region">
+      <Position>4</Position>
+      <DataType>char(26)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="32" parent="14" name="SurfaceArea">
+      <Position>5</Position>
+      <DataType>float(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0.00&apos;</DefaultExpression>
+    </column>
+    <column id="33" parent="14" name="IndepYear">
+      <Position>6</Position>
+      <DataType>smallint(6)|0</DataType>
+    </column>
+    <column id="34" parent="14" name="Population">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="35" parent="14" name="LifeExpectancy">
+      <Position>8</Position>
+      <DataType>float(3,1)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="GNP">
+      <Position>9</Position>
+      <DataType>float(10,2)|0</DataType>
+    </column>
+    <column id="37" parent="14" name="GNPOld">
+      <Position>10</Position>
+      <DataType>float(10,2)|0</DataType>
+    </column>
+    <column id="38" parent="14" name="LocalName">
+      <Position>11</Position>
+      <DataType>char(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="14" name="GovernmentForm">
+      <Position>12</Position>
+      <DataType>char(45)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="14" name="HeadOfState">
+      <Position>13</Position>
+      <DataType>char(60)|0</DataType>
+    </column>
+    <column id="41" parent="14" name="Capital">
+      <Position>14</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="42" parent="14" name="Code2">
+      <Position>15</Position>
+      <DataType>char(2)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <key id="43" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Code</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="15" name="CountryCode">
+      <Position>1</Position>
+      <DataType>char(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="45" parent="15" name="Language">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="46" parent="15" name="IsOfficial">
+      <Position>3</Position>
+      <DataType>enum(&apos;T&apos;, &apos;F&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;F&apos;</DefaultExpression>
+    </column>
+    <column id="47" parent="15" name="Percentage">
+      <Position>4</Position>
+      <DataType>float(4,1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0.0&apos;</DefaultExpression>
+    </column>
+    <index id="48" parent="15" name="CountryCode">
+      <ColNames>CountryCode</ColNames>
+    </index>
+    <key id="49" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CountryCode
+Language</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="50" parent="15" name="countryLanguage_ibfk_1">
+      <ColNames>CountryCode</ColNames>
+      <RefSchemaName>world</RefSchemaName>
+      <RefTableName>country</RefTableName>
+      <RefColNames>Code</RefColNames>
+    </foreign-key>
+    <column id="51" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="16" name="navn">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="53" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="54" parent="17" name="nr">
+      <DataType>smallint(2)|0</DataType>
+    </argument>
+    <argument id="55" parent="17" name="fornavn">
+      <DataType>varchar(10)|0</DataType>
+    </argument>
+    <argument id="56" parent="17" name="etternavn">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+    <argument id="57" parent="17" name="adresse">
+      <DataType>varchar(12)|0</DataType>
+    </argument>
+    <argument id="58" parent="17" name="postnummer">
+      <DataType>smallint(4)|0</DataType>
+    </argument>
+    <argument id="59" parent="17" name="telefon">
+      <DataType>varchar(8)|0</DataType>
+    </argument>
+    <argument id="60" parent="17" name="melding">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>varchar(12)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="hamcrest-all-1.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Sources/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/hamcrest-junit-2.0.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/java-hamcrest-2.0.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/junit-4.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/mockito-all-1.10.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/mysql-connector-java-5.1.40.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/mysql-connector-java-5.1.44-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/mysql-connector-java-5.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/ormlite-core-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Sources/ormlite-jdbc-5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Sources/mockito-all-1.10.19.jar!/" />
+    </SOURCES>
+  </library>
+</component>
